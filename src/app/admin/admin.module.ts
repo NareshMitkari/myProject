@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { NgxPaginationModule } from 'ngx-pagination'; 
 
 import { AdminRoutingModule } from './admin-routing.module';
 import { HomeComponent } from './home/home.component';
@@ -13,11 +14,14 @@ import { AddPostComponent } from './add-post/add-post.component';
     HomeComponent,
     UserComponent,
     PostComponent,
-    AddPostComponent
+    AddPostComponent,
+
   ],
   imports: [
     CommonModule,
-    AdminRoutingModule
-  ]
+    AdminRoutingModule,
+    NgxPaginationModule 
+  ],
+ // exports: [CommonModule, NgxPaginationModule]
 })
 export class AdminModule { }
